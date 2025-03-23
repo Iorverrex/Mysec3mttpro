@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My landing Page</title>
+    <title>My Landing Page</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!--objective-->
-   <!--To design and develop a landing page for a fictional product or service using HTML and CSS--> 
+    <!-- Objective -->
+    <!-- To design and develop a landing page for a fictional product or service using HTML and CSS --> 
+
     <!-- Header Section -->
     <header>
-        
         <div class="header-container">
             <div class="logo">
                 <h1>MyProject</h1> <!-- Your brand or project name -->
             </div>
+
             <div class="search-bar">
                 <input type="text" placeholder="Search...">
                 <button>Search</button>
             </div>
-            <nav>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                &#9776;
+            </div>
+
+            <nav id="nav-menu">
                 <ul class="nav-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Features</a></li>
@@ -35,7 +42,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <h1>Welcome to MyProject</h1>
-        <p>Your solution for a better Products.</p>
+        <p>Your solution for better products.</p>
         <div class="cta-buttons">
             <a href="#" class="cta-btn">Sign Up Now</a>
             <a href="#" class="cta-btn">Learn More</a>
@@ -45,30 +52,22 @@
     <!-- Features Section -->
     <section class="features">
         <div class="feature">
-            <img src="image/diningroom.jpg" alt="Optimized Image" loading="lazy" class="img1" width="300" height="200">
-            <h3>Dinning Chairs</h3>
-            <p>This dinning chairs are design to give a confort services at affortable price and 
-                are delivered at you house door. installation free.
-             </p><br>
-             <h4>Price: <span>$2368</span></h4>
+            <img src="image/diningroom.jpg" alt="Dining chairs offering comfort" loading="lazy" class="img1" width="300" height="200">
+            <h3>Dining Chairs</h3>
+            <p>These dining chairs are designed to provide comfort at an affordable price and are delivered to your door with free installation.</p><br>
+            <h4 class="price">Price: <span>$2368</span></h4>
         </div>
         <div class="feature">
-            <img src="image/sandwich (1).jpg" alt="Optimized Image" loading="lazy" class="img2"width="300" height="200" >
-            <h3>Good Foot</h3>
-            <p>We sell different types of good and affortable foot. It can be delivered at 
-            your house door at your confort time.  </p><br>
-            <h4>Price: <span>$7834</span></h4>
-
-           
+            <img src="image/sandwich (1).jpg" alt="Delicious food" loading="lazy" class="img2" width="300" height="200">
+            <h3>Good Food</h3>
+            <p>We sell different types of affordable food, delivered to your doorstep at your convenience.</p><br>
+            <h4 class="price">Price: <span>$7834</span></h4>
         </div>
         <div class="feature">
-            <img src="image/sanfran.jpg" alt="Optimized Image" loading="lazy" class="img3" width="300" height="200">
+            <img src="image/sanfran.jpg" alt="Engineering quality bridge construction" loading="lazy" class="img3" width="300" height="200">
             <h3>Bridge</h3>
-            <p>This bridge is constructed with standard materials and proper Engineering principle,
-                we offered on time services with quality. 
-            </p><br>
-            <h4>Price: <span>$567</span></h4>
-           
+            <p>This bridge is constructed using standard materials and engineering principles. We offer on-time services with quality.</p><br>
+            <h4 class="price">Price: <span>$567</span></h4>
         </div>
     </section>
 
@@ -76,8 +75,21 @@
     <footer>
         <div class="contact">
             <p>Contact us at: <a href="mailto:iorvertersur@gmail.com">iorvertersur@gmail.com</a></p>
+            <p>Or call us: <a href="tel:+123456789">+1 234 567 89</a></p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            </div>
         </div>
         <p>&copy; 2025 MyProject. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Function to toggle the mobile menu
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
+

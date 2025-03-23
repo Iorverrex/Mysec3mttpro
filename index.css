@@ -1,240 +1,209 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f8ff; /* Light blue background */
-    color: #2c3e50; /* Dark charcoal text for readability */
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  /* Header (Navigation Bar) */
-  header {
-    background-color: #34495e; /* Dark gray background for the header */
-    color: white;
-    padding: 1rem;
-  }
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo h1 {
-    font-size: 1.8rem;
-  }
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-  }
-  
-  .search-bar input {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    margin-right: 0.5rem;
-  }
-  
-  .search-bar button {
-    padding: 0.5rem 1rem;
-    background-color: #1abc9c; /* Teal button color */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .search-bar button:hover {
-    background-color: #16a085; /* Darker teal color on hover */
-  }
-  
-  nav {
-    flex-shrink: 0;
-  }
-  
-  .nav-menu {
-    display: flex;
-    justify-content: flex-start;
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .nav-menu li {
-    margin: 0 1.5rem;
-  }
-  
-  .nav-menu a {
-    color: white;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-menu a:hover {
-    color: #16a085; /* Lighter teal color on hover */
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 6rem 1rem;
-    background-color: #2980b9; /* Light blue background for the hero section */
-  }
-  
-  .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    color: #ecf0f1; /* Off-white color for the heading */
-  }
-  
-  .hero p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
-  }
-  
-  .cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .cta-btn {
-    background-color: #1abc9c; /* Teal color for CTA buttons */
-    color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-btn:hover {
-    background-color: #16a085; /* Darker teal color on hover */
-  }
-  
-  /* Features Section */
-  .features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem;
-    text-align: center;
-    background-color: #ffffff; /* White background for features */
-  }
-  
-  .feature {
-    padding: 1.5rem;
-    background-color: #ecf0f1; /* Light grey background for feature boxes */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  }
-  
-  .feature{
-    width: 400px;
-    height: 500px;
-    margin-bottom: 1rem;
-  }
-   img {
-    width: 100%;
-    height: 50%;
-    
-  }
-  h4{
-    text-align: left;
-    font-size: larger;
-  }
-  
- 
-  .feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #2980b9; /* Light blue color for feature titles */
-  }
-  
-  .feature p {
-    font-size: 1rem;
-    color: #7f8c8d; /* Grey color for descriptions */
-  }
-  
-  @media screen and (max-width: 768px) {
+/* General Layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .header-container{
-      display: flex;
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+header .search-bar {
+  display: flex;
+}
+
+header .search-bar input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+header .search-bar button {
+  padding: 0.5rem;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#nav-menu.active {
+  display: block;
+}
+
+#nav-menu {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+      display: block;
+  }
+
+  nav ul {
+      display: none;
       flex-direction: column;
-    }
-    /* Adjust Hero Section */
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-    .hero p {
-      font-size: 1rem;
-    }
-    .feature img {
       width: 100%;
-      height: 250px;
-      margin-bottom: 1rem;
-    }
-  
-    /* Make CTA buttons stack vertically on mobile */
-    .cta-buttons {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      padding: 1rem;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.hero .cta-buttons {
+  margin-top: 1rem;
+}
+
+.hero .cta-btn {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero .cta-btn:hover {
+  background-color: #444;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: #fafafa;
+  flex-wrap: wrap;
+}
+
+.feature {
+  text-align: center;
+  width: 30%;
+  margin-bottom: 2rem;
+}
+
+.feature img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.feature h3 {
+  margin: 1rem 0;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: green;
+}
+
+.price span {
+  color: #333;
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+footer .social-links {
+  margin-top: 10px;
+}
+
+footer .social-links a {
+  margin: 0 10px;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .features {
       flex-direction: column;
-      gap: 1rem;
-    }
-  
-    /* Features Section - Stack on mobile */
-    .features {
-      grid-template-columns: 1fr;
-    }
-  
-    /* Adjust search bar and menu for mobile */
-    .search-bar {
-      margin-bottom: 1rem;
-    }
-  
-    .nav-menu {
-      flex-direction: row;
       align-items: center;
-    }
-    .nav-bar li{
-      display: flex;
-      flex-direction: row;
-    }
-  
   }
-  
-  /* Footer Section */
-  footer {
-    background-color: #2c3e50; /* Dark charcoal background for the footer */
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
+
+  .feature {
+      width: 80%;
   }
-  
-  footer .contact {
-    margin-bottom: 1rem;
+
+  .price {
+      font-size: 1rem;
   }
-  
-  footer a {
-    color: #1abc9c; /* Teal color for social links */
-  }
-  
-  footer a:hover {
-    color: #16a085; /* Darker teal color on hover */
-  }
-  
-  footer p {
-    font-size: 0.9rem;
-  }
-  
+}
