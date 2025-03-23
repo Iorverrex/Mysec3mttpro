@@ -24,9 +24,10 @@
 
             <!-- Hamburger Menu for Mobile -->
             <div class="hamburger-menu" onclick="toggleMenu()">
-                &#9776;
+                &#9776; <!-- Hamburger icon -->
             </div>
 
+            <!-- Navigation menu (hidden on mobile and shown on click) -->
             <nav id="nav-menu">
                 <ul class="nav-menu">
                     <li><a href="#">Home</a></li>
@@ -84,12 +85,23 @@
     </footer>
 
     <script>
-        // Function to toggle the mobile menu
+        // Function to toggle the hamburger menu and side navigation
         function toggleMenu() {
             var menu = document.getElementById('nav-menu');
-            menu.classList.toggle('active');
+            menu.classList.toggle('active'); // Toggle the "active" class to slide the menu in/out
+        }
+    
+        // Close the menu when clicking outside of it
+        window.onclick = function(event) {
+            var menu = document.getElementById('nav-menu');
+            var hamburger = document.querySelector('.hamburger-menu');
+            
+            // Close the menu if the click is outside the nav menu or hamburger icon
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('active');
+            }
         }
     </script>
+    
 </body>
 </html>
-
