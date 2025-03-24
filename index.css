@@ -192,3 +192,27 @@ footer a:hover {
 #menu.open {
   display: flex; /* Ensures menu is visible */
 }
+/* Mobile Menu Hidden (Default State) */
+#menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #007373; /* Dark teal */
+  border-radius: 5px;
+  padding: 10px;
+  flex-direction: column;
+  gap: 10px;
+
+  transform: translateY(-20px); /* Move out of view */
+  opacity: 0; /* Hidden visually */
+  pointer-events: none; /* Disable interaction */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+}
+
+/* Mobile Menu Open (Visible State) */
+#menu.open {
+  transform: translateY(0); /* Bring into view */
+  opacity: 1; /* Fully visible */
+  pointer-events: auto; /* Enable interaction */
+}
+
