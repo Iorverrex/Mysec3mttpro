@@ -13,7 +13,6 @@ body {
   background-color: #fefae0;
   scroll-behavior: smooth; /* Smooth scrolling effect */
 }
-
 /* Header Section */
 header {
   background-color: #008080;
@@ -125,7 +124,7 @@ nav {
   border-radius: 5px;
 }
 
-.feature h3 {
+.feature {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #008080;
@@ -192,4 +191,11 @@ footer a:hover {
   #hero p {
     font-size: 1rem;
   }
+}
+#menu {
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+}
+
+#menu.open {
+  display: flex; /* Ensures menu is visible */
 }
