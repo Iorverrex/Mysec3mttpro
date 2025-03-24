@@ -73,20 +73,10 @@ nav {
   margin-bottom: 20px;
 }
 
-#hero .btn1 {
+#hero button {
   background-color: #ff6347; /* Bright coral */
   color: white;
   border: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-#hero .btn2 {
-  background: none;
-  color: white;
-  border: 1px solid #ff6347;
   padding: 10px 20px;
   margin: 0 10px;
   border-radius: 5px;
