@@ -11,7 +11,7 @@
   <header>
     <nav>
       <img src="image/logo.jpg" alt="Fictional Product Logo" id="logo">
-      <button id="menu-toggle">☰</button>
+      <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
       <ul id="menu">
         <li><a href="#hero">Home</a></li>
         <li><a href="#features">Features</a></li>
@@ -26,34 +26,41 @@
     <p>Your perfect solution for our products</p>
     <div>
       <button>Sign Up Now</button>
-      <button>Learn More</button> <!-- Inactive button -->
+      <button disabled aria-label="Learn More button is inactive">Learn More</button> <!-- Updated for accessibility -->
     </div>
   </section>
 
   <!-- Features Section -->
   <section id="features">
     <div class="feature">
-      <img src="image/diningroom.jpg" alt="Dining room highlighting comfort and style">
-      <h2>Dinning chairs</h2>
-      <p>this product is a chairs and is afforble. it can be use for dinning </p>
+      <img src="image/diningroom.jpg" alt="Dining room setup showing comfort and style">
+      <h3>Dining Chairs</h3> <!-- Changed from h2 to h3 for semantic accuracy -->
+      <p>This product offers affordable and stylish chairs for dining.</p>
     </div>
     <div class="feature">
-      <img src="image/gettyimages-1267511601-612x612.jpg" alt="Delicious sandwich representing convenience">
-      <h2>fitness</h2>
-      <p>this is our gymy equipment com and get your fitness, lifting</p>
+      <img src="image/gettyimages-1267511601-612x612.jpg" alt="Gym equipment representing fitness and health">
+      <h3>Fitness Equipment</h3> <!-- Changed from h2 to h3 for semantic accuracy -->
+      <p>Explore our gym equipment to enhance your fitness and strength.</p>
     </div>
     <div class="feature">
-      <img src="image/sanfran.jpg" alt="Beautiful scenery showcasing relaxation">
-      <h2>Bridge</h2>
-      <p>A well design bridge that can stand a heavy load. affortable </p>
+      <img src="image/sanfran.jpg" alt="A bridge showcasing modern design and durability">
+      <h3>Bridge Design</h3> <!-- Changed from h2 to h3 for semantic accuracy -->
+      <p>Well-designed bridges offering heavy-load durability at affordable prices.</p>
     </div>
   </section>
 
   <!-- Footer Section -->
   <footer id="footer">
-    <p>Contact us: iorvertersur@gmail.com | +123 915558573</p>
-    <p>Follow us: <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
-    <p>&copy; 2025 accesories Product</p>
+    <ul>
+      <li>Contact us: <a href="mailto:iorvertersur@gmail.com">iorvertersur@gmail.com</a></li>
+      <li>Phone: +123 915558573</li>
+      <li>Follow us:
+        <a href="#">Twitter</a> |
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a>
+      </li>
+    </ul>
+    <p>&copy; 2025 Accessories Product</p>
   </footer>
 
   <!-- JavaScript for Smooth Scrolling and Menu -->
