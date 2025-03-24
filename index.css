@@ -9,13 +9,14 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  color: #2e2e2e;
-  background-color: #fefae0;
+  color: #2e2e2e; /* Dark charcoal gray for text */
+  background-color: #fefae0; /* Light beige for background */
+  scroll-behavior: smooth; /* Smooth scrolling for navigation */
 }
 
-/* Header Styles */
+/* Header Section */
 header {
-  background-color: #008080;
+  background-color: #008080; /* Vibrant teal */
   color: white;
   padding: 15px 20px;
   position: sticky;
@@ -25,7 +26,7 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Align logo and menu */
   align-items: center;
 }
 
@@ -43,7 +44,7 @@ nav {
 }
 
 #menu li a:hover {
-  color: #ff6347;
+  color: #ff6347; /* Bright coral on hover */
 }
 
 #menu-toggle {
@@ -64,7 +65,7 @@ nav {
 #hero {
   text-align: center;
   padding: 50px 20px;
-  background: linear-gradient(135deg, #008080, #009999);
+  background: linear-gradient(135deg, #008080, #009999); /* Gradient teal */
   color: white;
 }
 
@@ -79,7 +80,7 @@ nav {
 }
 
 #hero button {
-  background-color: #ff6347;
+  background-color: #ff6347; /* Bright coral for buttons */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -90,13 +91,13 @@ nav {
 }
 
 #hero button:disabled {
-  background-color: #cccccc;
-  color: #666666;
+  background-color: #cccccc; /* Light gray for disabled */
+  color: #666666; /* Dimmed text for disabled button */
   cursor: not-allowed;
 }
 
 #hero button:hover:not(:disabled) {
-  background-color: #005252;
+  background-color: #005252; /* Dark teal for hover */
 }
 
 /* Features Section */
@@ -113,13 +114,13 @@ nav {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   text-align: center;
 }
 
 .feature img {
-  width: 100%;
-  max-width: 200px;
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
   margin-bottom: 15px;
   border-radius: 5px;
 }
@@ -127,46 +128,46 @@ nav {
 .feature h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #008080;
+  color: #008080; /* Teal for feature titles */
 }
 
 .feature p {
   font-size: 1rem;
-  color: #666666;
+  color: #666666; /* Medium gray for feature descriptions */
 }
 
 /* Footer Section */
 footer {
-  background-color: #008080;
+  background-color: #008080; /* Vibrant teal */
   color: white;
   text-align: center;
   padding: 20px;
 }
 
 footer a {
-  color: #ff6347;
+  color: #ff6347; /* Bright coral for footer links */
   text-decoration: none;
 }
 
 footer a:hover {
-  color: white;
+  color: white; /* White on hover for footer links */
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   #menu-toggle {
-    display: block;
+    display: block; /* Show menu toggle for small screens */
   }
 
   #menu {
     display: none;
-    flex-direction: column;
+    flex-direction: column; /* Stack menu vertically on mobile */
     gap: 10px;
-    background-color: #007373;
+    background-color: #007373; /* Slightly darker teal for mobile menu */
     padding: 10px;
     position: absolute;
     top: 60px;
-    right: 20px;
+    right: 20px; /* Right align the menu */
     border-radius: 5px;
   }
 
@@ -175,7 +176,7 @@ footer a:hover {
   }
 
   #features {
-    flex-direction: column;
+    flex-direction: column; /* Stack features on smaller screens */
   }
 
   #hero h1 {
@@ -184,5 +185,20 @@ footer a:hover {
 
   #hero p {
     font-size: 1rem;
+  }
+}
+
+/* Additional Media Query for Larger Tablets (1024px) */
+@media screen and (max-width: 1024px) {
+  #features {
+    gap: 15px; /* Reduce gap between features */
+  }
+
+  #hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #hero p {
+    font-size: 1.1rem;
   }
 }
